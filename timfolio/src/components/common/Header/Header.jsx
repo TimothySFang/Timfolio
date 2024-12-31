@@ -3,7 +3,7 @@ import styles from "./Header.module.css";
 
 const Header = () => {
   return (
-    <nav className={styles.header}>
+    <nav className={`bg-[#FDF7EC] ${styles.header}`}>
       <div style={{ textAlign: 'left' }}>
         <a className={styles.title} href="/">Timothy.</a>
       </div>

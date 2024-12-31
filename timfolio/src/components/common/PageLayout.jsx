@@ -4,9 +4,9 @@ import Footer from './Footer/Footer';
 
 const PageLayout = ({ children }) => {
   return (
-    <div>
+    <div className="h-screen overflow-auto">
       <Header />
-      <main className="container mx-auto p-4">
+      <main>
         {children}
       </main>
       <Footer />
