@@ -2,14 +2,14 @@ import React from 'react';
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
 
-const PageLayout = ({ children }) => {
+const PageLayout = ({ children, isPhotographyPage = false }) => {
   return (
     <div className="h-screen overflow-auto">
-      <Header />
+      <Header isPhotographyPage={isPhotographyPage} />
       <main>
         {children}
       </main>
-      <Footer />
+      {!isPhotographyPage && <Footer />}
     </div>
   );
 };
