@@ -1,6 +1,7 @@
 import PageLayout from "@/components/common/PageLayout";
 import balcony from "../../assets/Home/balcony.jpg";
 import cartImage from "../../assets/Home/cart.jpg";
+import BasedInVancouver from "../../assets/Home/BasedInVancouver.png"
 
 const HomePage = () => {
   return (
@@ -49,7 +50,7 @@ const HomePage = () => {
           </div>
         </div>
         <div className=" bg-[#FDF7EC]">
-          <div className="grid grid-cols-12 pt-20 pb-20">
+          <div className="grid grid-cols-12 pt-28 pb-28">
             <div className="col-span-6 h-full flex items-center justify-center">
               <div className="flex flex-col justify-center items-center">
                 <div className="relative center">
@@ -83,8 +84,13 @@ const HomePage = () => {
               </div>
             </div>
           </div>
+            <img
+              src={BasedInVancouver}
+              alt="Balcony view"
+              className="w-full h-full object-cover object-top"
+            />
+          </div>
         </div>
-      </div>
     </PageLayout>
   );
 };
