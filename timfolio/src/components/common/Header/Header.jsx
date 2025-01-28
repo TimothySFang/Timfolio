@@ -1,30 +1,31 @@
 import React from 'react';
 import styles from "./Header.module.css";
+import { Link } from 'react-router-dom';
 
 const Header = ({ isPhotographyPage = false }) => {
   return (
     <nav className={`${styles.header} ${isPhotographyPage ? 'bg-black/20 backdrop-blur-sm' : 'bg-[#FDF7EC]'}`}>
       <div style={{ textAlign: 'left' }}>
-        <a 
+        <Link 
           className={`${styles.title} ${isPhotographyPage ? 'text-white' : 'text-black'}`} 
-          href="/"
+          to="/"
         >
           Timothy.
-        </a>
+        </Link>
       </div>
       <div className={styles.buttonContainer} style={{ textAlign: 'right' }}>
-        <a 
+        <Link 
           className={`${styles.button} ${isPhotographyPage ? 'text-white' : 'text-black'}`} 
-          href="/photography"
+          to="/photography"
         >
           Photography
-        </a>
-        <a 
+        </Link>
+        <Link 
           className={`${styles.button} ${isPhotographyPage ? 'text-white' : 'text-black'}`} 
-          href="/software"
+          to="/software"
         >
           Software
-        </a>
+        </Link>
       </div>
     </nav>
   );

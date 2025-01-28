@@ -16,6 +16,8 @@ const router = createBrowserRouter([
         path:"/",
         element:<HomePage />
     }
-]);
+], {
+    basename: '/Timfolio',
+});
 
 export default router;
