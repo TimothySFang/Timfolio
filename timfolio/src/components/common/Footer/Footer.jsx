@@ -13,7 +13,7 @@ const Footer = () => {
           <div className="w-full md:w-1/6">
             <div className="flex justify-center md:justify-start gap-4 items-center">
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/Timothy-S-Fang"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:opacity-80 transition-opacity"
@@ -23,7 +23,7 @@ const Footer = () => {
                 <img src={githubLogo} alt="GitHub" className="w-6 h-6" />
               </a>
               <a
-                href="https://linkedin.com/in/yourusername"
+                href="https://www.linkedin.com/in/timothy-s-fang/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:opacity-80 transition-opacity"
@@ -33,7 +33,7 @@ const Footer = () => {
                 <img src={linkedinLogo} alt="LinkedIn" className="w-6 h-6" />
               </a>
               <a
-                href="https://instagram.com/yourusername"
+                href="https://www.instagram.com/tiimothyfang/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:opacity-80 transition-opacity"
