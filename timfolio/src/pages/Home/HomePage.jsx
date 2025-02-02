@@ -12,16 +12,16 @@ const HomePage = () => {
   return (
     <PageLayout>
       <div className="snap-y snap-mandatory">
-        <div className="h-screen bg-[#FDF7EC] flex flex-col justify-center items-center">
-          <h1 className="font-['Space_Grotesk'] text-[180px] font-bold tracking-widest text-[#4A4139] mb-2">
+        <div className="h-screen bg-[#FDF7EC] flex flex-col justify-center items-center px-4">
+          <h1 className="font-['Space_Grotesk'] text-[50px] md:text-[180px] font-bold tracking-widest text-[#4A4139] mb-2 text-center">
             TIMFOLIO
           </h1>
-          <div className="flex flex-col items-center gap-8">
+          <div className="flex flex-col items-center gap-6">
             <div className="text-center">
               <p className="font-['Space_Grotesk'] text-xs tracking-widest text-[#4A4139]">
                 PHOTOGRAPHY + SWE
               </p>
-              <p className="font-['Cormorant'] text-xl text-[#4A4139]">
+              <p className="font-['Cormorant'] text-lg md:text-xl text-[#4A4139]">
                 Timothy Fang
               </p>
             </div>
@@ -54,33 +54,33 @@ const HomePage = () => {
             </p>
           </div>
         </div>
-        <div className=" bg-[#FDF7EC]">
-          <div className="grid grid-cols-12 pt-28 pb-28">
-            <div className="col-span-6 h-full flex items-center justify-center">
+        <div className="bg-[#FDF7EC]">
+          <div className="flex flex-col md:grid md:grid-cols-12 pt-12 md:pt-28 pb-12 md:pb-28 px-4 md:px-0">
+            <div className="md:col-span-6 order-2 md:order-1 h-full flex items-center justify-center">
               <div className="flex flex-col justify-center items-center">
                 <div className="relative center">
                   <div className="relative">
                     <span className="absolute top-4 left-5 bg-[#FDB50B]/60 inset-y-10">
-                      <h2 className="font-['Cormorant_Garamond'] text-7xl font-medium italic invisible ">
+                      <h2 className="font-['Cormorant_Garamond'] text-5xl md:text-7xl font-medium italic invisible ">
                         TIMOTHY
                       </h2>
                     </span>
-                    <h2 className="font-['Cormorant_Garamond'] text-[80px] font-light italic relative -mt-4">
+                    <h2 className="font-['Cormorant_Garamond'] text-[50px] md:text-[80px] font-light italic relative -mt-4">
                       TIMOTHY
                     </h2>
                   </div>
-                  <h2 className="font-['Cormorant_Garamond'] text-[80px] font-medium-mt-4">
+                  <h2 className="font-['Cormorant_Garamond'] text-[50px] md:text-[80px] font-medium-mt-4">
                     SHI-HONG
                   </h2>
-                  <h2 className="font-['Cormorant_Garamond'] text-[80px] font-light italic -mt-2">
+                  <h2 className="font-['Cormorant_Garamond'] text-[50px] md:text-[80px] font-light italic -mt-2">
                     FANG
                   </h2>
                 </div>
               </div>
             </div>
-            <div className="col-span-6">
+            <div className="md:col-span-6 order-1 md:order-2 mb-8 md:mb-0">
               <div className="relative flex justify-center">
-                <div className="absolute top-[-50px] left-[50px] bg-[#4A4139] aspect-square w-[70%]" />
+                <div className="absolute top-[-30px] left-4 md:top-[-50px] md:left-[50px] bg-[#4A4139] aspect-square w-[70%]" />
                 <img
                   src={cartImage}
                   alt="Person in shopping cart"
@@ -89,81 +89,59 @@ const HomePage = () => {
               </div>
             </div>
           </div>
-            <img
-              src={BasedInVancouver}
-              alt="Balcony view"
-              className="w-full h-full object-cover object-top"
-            />
-          </div>
-          <div className="grid grid-cols-12 pt-28 pb-28 bg-[#FDF7EC] ">
-            <div className="col-span-6">
-              <div className="relative">
-                <div className="absolute top-[-50px] right-[50px] bg-[#4A4139] aspect-square w-[70%]" />
-                <img
-                  src={AboutMe}
-                  alt="Person in shopping cart"
-                  className="aspect-square w-[70%] object-cover ml-auto relative scale-x-[-1]" /* Added scale-x-[-1] for flip */
-                />
-              </div>
+          <img
+            src={BasedInVancouver}
+            alt="Balcony view"
+            className="w-full h-full object-cover object-top"
+          />
+        </div>
+        <div className="flex flex-col md:grid md:grid-cols-12 pt-12 md:pt-28 pb-12 md:pb-28 bg-[#FDF7EC] px-10 md:-px-0">
+          <div className="md:col-span-6 order-1 mb-8 md:mb-0">
+            <div className="relative flex justify-center">
+              <div className="absolute top-[-30px] left-4 md:top-[-50px] md:right-[50px] bg-[#4A4139] aspect-square w-[70%]" />
+              <img
+                src={AboutMe}
+                alt="About me visual"
+                className="aspect-square w-[70%] object-cover mx-auto md:ml-auto relative md:scale-x-[-1]"
+              />
             </div>
-            <div className="col-span-6 h-full flex items-start pl-20">
-              <div className="flex flex-col items-start">
+          </div>
+          <div className="md:col-span-6 order-2 h-full flex items-start px-4 md:pl-20">
+            <div className="flex flex-col items-start">
+              <div className="relative">
                 <div className="relative">
-                  <div className="relative">
-                    <span className="absolute top-4 left-5 bg-[#FDB50B]/60 inset-y-10">
-                      <h2 className="font-['Cormorant_Garamond'] text-7xl font-medium italic invisible ">
-                        ABOUT ME 
-                      </h2>
-                    </span>
-                    <h2 className="font-['Cormorant_Garamond'] text-[80px] font-light italic relative -mt-4">
+                  <span className="absolute top-2 md:top-4 left-5 bg-[#FDB50B]/60 md:inset-y-10 inset-y-6">
+                    <h2 className="font-['Cormorant_Garamond'] text-[50px] md:text-[80px] font-medium italic invisible ">
                       ABOUT ME
                     </h2>
-                  </div>
-                </div>
-                
-                <div className="mt-5 max-w-xl">
-                  <p className="font-['Roboto'] font-extralight leading-relaxed mb-8">
-                    Hi, I'm Timothy! I'm a software engineer with a passion for creating meaningful, user-focused solutions. My journey as a Chinese-Canadian immigrant has shaped my curiosity and resilience, which I bring into every aspect of my life—whether it's coding dynamic applications, exploring transformative ideas, or tackling personal challenges.
-                  </p>
-                  
-                  <p className="font-['Roboto'] font-extralight leading-relaxed mb-8">
-                    I thrive at the intersection of creativity and logic, with experience in full-stack development and a love for learning new technologies. Beyond tech, I'm a triathlete-in-training with a goal to one day complete an Ironman. You can often find me experimenting with gaming setups, running marathons, or losing myself in the vibrant world of Stardew Valley.
-                  </p>
-                  
-                  <p className="font-['Roboto'] font-extralight leading-relaxed">
-                    I believe in the power of small steps to create big changes, whether it's shipping a feature, learning a new skill, or finishing that last mile. Let's build something impactful together!
-                  </p>
+                  </span>
+                  <h2 className="font-['Cormorant_Garamond'] text-[50px] md:text-[80px] font-light italic relative -mt-4">
+                    ABOUT ME
+                  </h2>
                 </div>
               </div>
-            </div>
-          </div>
-          <div className="grid grid-cols-12 pb-28 bg-[#FDF7EC]">
-            <div className="col-span-3">
-              <img 
-              src={gridOne}
-              alt="gridOne"
-              />
-            </div>
-            <div className="col-span-3">
-              <img 
-              src={gridTwo}
-              alt="gridTwo"
-              />
-            </div>
-            <div className="col-span-3">
-              <img 
-              src={gridThree}
-              alt="gridThree"
-              />
-            </div>
-            <div className="col-span-3">
-              <img 
-              src={gridFour}
-              alt="gridFour"
-              />
+
+              <div className="mt-5 max-w-xl">
+                <p className="font-['Roboto'] font-extralight text-[12px] md:text-[14px] lg:text-base leading-relaxed mb-6">
+                  Hi, I'm Timothy! I'm a software engineer passionate about building meaningful, user-focused solutions. My journey as a Chinese-Canadian immigrant has shaped my curiosity and resilience, which I bring into coding, exploring transformative ideas, and personal challenges. I thrive at the intersection of creativity and logic, with experience in full-stack development and a love for learning new technologies.
+                </p>
+
+                <p className="font-['Roboto'] font-extralight text-[12px] md:text-[14px] lg:text-base  leading-relaxed">
+                  Beyond tech, I'm a triathlete-in-training, aiming to complete an Ironman. I enjoy experimenting with gaming setups, running marathons, and getting lost in Stardew Valley. I believe small steps create big change—whether it’s shipping a feature, mastering a skill, or pushing through the last mile. Let’s build something impactful together!
+                </p>
+              </div>
+
             </div>
           </div>
         </div>
+        <div className="grid grid-cols-2 md:grid-cols-12 gap-4 md:gap-0 px-4 md:px-0 pb-12 md:pb-28 bg-[#FDF7EC]">
+          {[gridOne, gridTwo, gridThree, gridFour].map((img, index) => (
+            <div key={index} className="col-span-3">
+              <img src={img} alt={`Grid ${index + 1}`} className="w-full h-auto" />
+            </div>
+          ))}
+        </div>
+      </div>
     </PageLayout>
   );
 };
