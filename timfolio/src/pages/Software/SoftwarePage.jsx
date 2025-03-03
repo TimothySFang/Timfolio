@@ -1,12 +1,31 @@
+import { useState, useEffect } from "react";
 import PageLayout from "../../components/common/PageLayout";
 import ExperienceSection from "../../components/Software/ExperienceSection";
 import jobData from "../../assets/Software/JobExperience.json";
 
 const SoftwarePage = () => {
+    const [isMobile, setIsMobile] = useState(false);
+
+    // Check if the device is mobile
+    useEffect(() => {
+        const checkIfMobile = () => {
+            setIsMobile(window.innerWidth < 768); // 768px is the md breakpoint in Tailwind
+        };
+        
+        // Initial check
+        checkIfMobile();
+        
+        // Add event listener for window resize
+        window.addEventListener('resize', checkIfMobile);
+        
+        // Cleanup
+        return () => window.removeEventListener('resize', checkIfMobile);
+    }, []);
+
     return (
         <PageLayout>
-            <div className="h-screen bg-[#FDF7EC] flex flex-col justify-center items-center">
-                <h1 className="font-['Space_Grotesk'] text-[100px] font-bold tracking-widest text-[#4A4139] mb-2">
+            <div className="h-screen bg-[#FDF7EC] flex flex-col justify-center items-center px-4">
+                <h1 className="font-['Space_Grotesk'] text-[40px] md:text-[100px] font-bold tracking-widest text-[#4A4139] mb-2 text-center">
                     SOFTWARE DEV
                     <span className="cursor-blink">_</span>
                 </h1>
@@ -39,7 +58,7 @@ const SoftwarePage = () => {
                     </p>
                 </div>
             </div>
-            <div className="bg-[#FDF7EC] py-20">
+            <div className="bg-[#FDF7EC] py-10 md:py-20">
                 {jobData.map((job, index) => (
                     <ExperienceSection 
                         key={job.Title}
@@ -50,6 +69,7 @@ const SoftwarePage = () => {
                         skills={job.Technology}
                         Logo={job.Logo}
                         isReversed={index % 2 !== 0}
+                        isMobile={isMobile}
                     />
                 ))}
             </div>
