@@ -67,7 +67,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="font-['Space_Grotesk'] font-medium text-xs tracking-widest">
+        <div className="font-['Space_Grotesk'] font-medium text-xs tracking-widest mt-8 md:mt-0">
           PHOTOS TAKEN BY ME
         </div>
         <div className="font-['Space_Grotesk'] font-medium text-xs tracking-widest pb-10">
@@ -81,7 +81,7 @@ const Footer = () => {
         </a>
       </div>
       <div className="flex justify-center">
-        <span className="font-['Space_Grotesk'] bg-[#4A4139] text-[180px] font-bold tracking-widest leading-none translate-y-[20%]">
+        <span className="font-['Space_Grotesk'] bg-[#4A4139] text-[80px] md:text-[180px] font-bold tracking-widest leading-none translate-y-[20%]">
           TIMFOLIO
         </span>
       </div>
