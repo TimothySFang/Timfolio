@@ -12,7 +12,8 @@ const PageLayout = ({ children, isPhotographyPage = false }) => {
       </main>
       {!isPhotographyPage && <Footer />}
     </div>
-  );
+    );
+    
 };
 
 export default PageLayout;

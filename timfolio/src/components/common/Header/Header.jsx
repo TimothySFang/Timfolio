@@ -8,7 +8,7 @@ const Header = ({ isPhotographyPage = false }) => {
   return (
     <nav className={`${styles.header} ${
       isPhotographyPage 
-        ? 'bg-black/20 backdrop-blur-sm' 
+        ? 'bg-[#001822]' 
         : 'bg-[#FDF7EC]'
     } px-4 md:px-8 relative`}>
       <div className="flex justify-between items-center w-full">

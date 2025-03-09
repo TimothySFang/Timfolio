@@ -23,13 +23,13 @@ const HomePage = () => {
     const checkIfMobile = () => {
       setIsMobile(window.innerWidth < 768); // 768px is the md breakpoint in Tailwind
     };
-    
+
     // Initial check
     checkIfMobile();
-    
+
     // Add event listener for window resize
     window.addEventListener('resize', checkIfMobile);
-    
+
     // Cleanup
     return () => window.removeEventListener('resize', checkIfMobile);
   }, []);
@@ -63,12 +63,12 @@ const HomePage = () => {
     if (balconyInView) {
       // Lock scrolling when the balcony image is in view
       document.body.style.overflow = "hidden";
-      
+
       // After animation completes, allow scrolling again
       const timer = setTimeout(() => {
         setLoadingComplete(true);
         document.body.style.overflow = "auto";
-        
+
         // Scroll to the content below after animation
         if (contentRef.current) {
           setTimeout(() => {
@@ -79,7 +79,7 @@ const HomePage = () => {
           }, 500);
         }
       }, 3000); // 3 seconds for the loading animation
-      
+
       return () => clearTimeout(timer);
     }
   }, [balconyInView]);
@@ -105,7 +105,7 @@ const HomePage = () => {
             </p>
           </div>
         </div>
-        <div 
+        <div
           ref={balconyRef}
           className="h-screen snap-start relative"
         >
@@ -114,7 +114,7 @@ const HomePage = () => {
             alt="Balcony view"
             className="w-full h-full object-cover object-top"
           />
-         {!isMobile && <div className="absolute inset-x-0 top-[9%] text-center">
+          {!isMobile && <div className="absolute inset-x-0 top-[9%] text-center">
             <div className="flex justify-center items-baseline gap-4">
               <p className="font-['Cormorant_Infant'] font-bold text-[#4A4139] text-[80px] relative">
                 <span className="absolute top-[] right-[5px] z-2 inset-3 bg-[#FDB50B]/60 rounded-sm"></span>
@@ -132,15 +132,15 @@ const HomePage = () => {
             </p>
           </div>}
         </div>
-        
-        <div ref={contentRef} className="bg-[#FDF7EC]">
-          <div className="flex flex-col md:grid md:grid-cols-12 pt-12 md:pt-28 pb-12 md:pb-28 px-4 md:px-0">
+
+        <div ref={contentRef} className="h-screen bg-[#FDF7EC]" style={{ height: 'calc(100vh - 64px)' }}>
+          <div className="flex flex-col md:grid md:grid-cols-12 h-full pt-20 md:pt-28 pb-12 md:pb-28 px-4 md:px-0">
             <div className="md:col-span-6 order-2 md:order-1 h-full flex items-center justify-center">
               <div className="flex flex-col justify-center items-center">
                 <div className="relative center">
                   <div className="relative">
-                    <span className="absolute top-4 left-5 bg-[#FDB50B]/60 inset-y-10">
-                      <h2 className="font-['Cormorant_Garamond'] text-5xl md:text-7xl font-medium italic invisible ">
+                    <span className="absolute top-2 md:top-4 left-5 bg-[#FDB50B]/60 md:inset-y-10 inset-y-6">
+                      <h2 className="font-['Cormorant_Garamond'] text-[50px] md:text-[80px] font-medium italic invisible ">
                         TIMOTHY
                       </h2>
                     </span>
@@ -148,10 +148,10 @@ const HomePage = () => {
                       TIMOTHY
                     </h2>
                   </div>
-                  <h2 className="font-['Cormorant_Garamond'] text-[50px] md:text-[80px] font-medium-mt-4">
+                  <h2 className="font-['Cormorant_Garamond'] text-[50px] md:text-[80px] font-medium mt-2">
                     SHI-HONG
                   </h2>
-                  <h2 className="font-['Cormorant_Garamond'] text-[50px] md:text-[80px] font-light italic -mt-2">
+                  <h2 className="font-['Cormorant_Garamond'] text-[50px] md:text-[80px] font-light italic -mt-1">
                     FANG
                   </h2>
                 </div>
@@ -159,7 +159,7 @@ const HomePage = () => {
             </div>
             <div className="md:col-span-6 order-1 md:order-2 mb-8 md:mb-0">
               <div className="relative flex justify-center">
-                <div className="absolute top-[-30px] left-4 md:top-[-50px] md:left-[50px] bg-[#4A4139] aspect-square w-[70%]" />
+                <div className="absolute top-[-20px] left-4 md:top-[-50px] md:left-[50px] bg-[#4A4139] aspect-square w-[70%]" />
                 <img
                   src={cartImage}
                   alt="Person in shopping cart"
@@ -168,14 +168,14 @@ const HomePage = () => {
               </div>
             </div>
           </div>
-          {/* Conditionally render different images based on screen size */}
-          <img
-            src={isMobile ? BasedVanMob : BasedInVancouver}
-            alt="Based in Vancouver"
-            className="w-full h-full object-cover object-top"
-          />
         </div>
-        <div className="flex flex-col md:grid md:grid-cols-12 pt-12 md:pt-28 pb-12 md:pb-28 bg-[#FDF7EC] px-10 md:-px-0">
+        {/* Conditionally render different images based on screen size */}
+        <img
+          src={isMobile ? BasedVanMob : BasedInVancouver}
+          alt="Based in Vancouver"
+          className="w-full h-full object-cover object-top"
+        />
+        <div className="flex flex-col md:grid md:grid-cols-12 pt-20 md:pt-28 pb-12 md:pb-28 bg-[#FDF7EC] px-10 md:-px-0">
           <div className="md:col-span-6 order-1 mb-8 md:mb-0">
             <div className="relative flex justify-center">
               <div className="absolute top-[-30px] left-4 md:top-[-50px] md:right-[50px] bg-[#4A4139] aspect-square w-[70%]" />
