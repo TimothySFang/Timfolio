@@ -10,7 +10,7 @@ const Header = ({ isPhotographyPage = false }) => {
       isPhotographyPage 
         ? 'bg-[#001822]' 
         : 'bg-[#FDF7EC]'
-    } px-4 md:px-8 relative`}>
+    } sticky top-0 z-50 bg-[#001822] md:bg-[#FDF7EC] px-4 md:px-8`}>
       <div className="flex justify-between items-center w-full">
         {/* Hamburger Menu (Mobile Only) */}
         <button
