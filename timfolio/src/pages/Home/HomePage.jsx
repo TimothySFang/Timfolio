@@ -87,7 +87,7 @@ const HomePage = () => {
   return (
     <PageLayout>
       <div className="snap-y snap-mandatory">
-        <div className="h-screen bg-[#FDF7EC] flex flex-col justify-center items-center px-4">
+        <div style={{ height: 'calc(100vh - 64px)' }} className="h-screen bg-[#FDF7EC] flex flex-col justify-center items-center px-4">
           <h1 className="font-['Space_Grotesk'] text-[50px] md:text-[180px] font-bold tracking-widest text-[#4A4139] mb-2 text-center">
             TIMFOLIO
           </h1>
@@ -107,14 +107,15 @@ const HomePage = () => {
         </div>
         <div
           ref={balconyRef}
-          className="h-screen snap-start relative"
+          className="snap-start relative"
         >
           <img
             src={isMobile ? BalconyMob : balcony}
             alt="Balcony view"
-            className="w-full h-full object-cover object-top"
+            className="w-full object-cover object-top"
+            style={{ height: 'calc(100vh - 64px)' }}
           />
-          {!isMobile && <div className="absolute inset-x-0 top-[9%] text-center">
+          {!isMobile && <div className="absolute inset-x-0 top-[7%] text-center">
             <div className="flex justify-center items-baseline gap-4">
               <p className="font-['Cormorant_Infant'] font-bold text-[#4A4139] text-[80px] relative">
                 <span className="absolute top-[] right-[5px] z-2 inset-3 bg-[#FDB50B]/60 rounded-sm"></span>
@@ -133,7 +134,7 @@ const HomePage = () => {
           </div>}
         </div>
 
-        <div ref={contentRef} className="h-screen bg-[#FDF7EC]" style={{ height: 'calc(100vh - 64px)' }}>
+        <div ref={contentRef} className="bg-[#FDF7EC]" style={{ height: 'calc(100vh - 64px)' }}>
           <div className="flex flex-col md:grid md:grid-cols-12 h-full pt-20 md:pt-28 pb-12 md:pb-28 px-4 md:px-0">
             <div className="md:col-span-6 order-2 md:order-1 h-full flex items-center justify-center">
               <div className="flex flex-col justify-center items-center">
@@ -174,6 +175,7 @@ const HomePage = () => {
           src={isMobile ? BasedVanMob : BasedInVancouver}
           alt="Based in Vancouver"
           className="w-full h-full object-cover object-top"
+          style={{ height: 'calc(100vh - 64px)' }}
         />
         <div className="flex flex-col md:grid md:grid-cols-12 pt-20 md:pt-28 pb-12 md:pb-28 bg-[#FDF7EC] px-10 md:-px-0">
           <div className="md:col-span-6 order-1 mb-8 md:mb-0">
