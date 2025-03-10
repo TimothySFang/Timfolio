@@ -87,7 +87,7 @@ const HomePage = () => {
   return (
     <PageLayout>
       <div className="snap-y snap-mandatory">
-        <div style={{ height: 'calc(100vh - 64px)' }} className="h-screen bg-[#FDF7EC] flex flex-col justify-center items-center px-4">
+        <div style={{ height: 'calc(100vh - 64px)' }} className="bg-[#FDF7EC] flex flex-col justify-center items-center px-4">
           <h1 className="font-['Space_Grotesk'] text-[50px] md:text-[180px] font-bold tracking-widest text-[#4A4139] mb-2 text-center">
             TIMFOLIO
           </h1>
