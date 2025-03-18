@@ -112,8 +112,7 @@ const HomePage = () => {
           <img
             src={isMobile ? BalconyMob : balcony}
             alt="Balcony view"
-            className="w-full object-cover object-top"
-            style={{ height: 'calc(100vh - 64px)' }}
+            className="w-full object-cover object-top full-height"
           />
           {!isMobile && <div className="absolute inset-x-0 top-[7%] text-center">
             <div className="flex justify-center items-baseline gap-4">
@@ -134,7 +133,7 @@ const HomePage = () => {
           </div>}
         </div>
 
-        <div ref={contentRef} className="bg-[#FDF7EC]" style={{ height: 'calc(100vh - 64px)' }}>
+        <div ref={contentRef} className="bg-[#FDF7EC] full-height">
           <div className="flex flex-col md:grid md:grid-cols-12 h-full pt-20 md:pt-28 pb-12 md:pb-28 px-4 md:px-0">
             <div className="md:col-span-6 order-2 md:order-1 h-full flex items-center justify-center">
               <div className="flex flex-col justify-center items-center">
@@ -145,11 +144,11 @@ const HomePage = () => {
                         TIMOTHY
                       </h2>
                     </span>
-                    <h2 className="font-['Cormorant_Garamond'] text-[50px] md:text-[80px] font-light italic relative -mt-4">
+                    <h2 className="font-['Cormorant_Garamond'] text-[50px] md:text-[80px] font-light italic relative">
                       TIMOTHY
                     </h2>
                   </div>
-                  <h2 className="font-['Cormorant_Garamond'] text-[50px] md:text-[80px] font-medium mt-2">
+                  <h2 className="font-['Cormorant_Garamond'] text-[50px] md:text-[80px] font-medium mt-0">
                     SHI-HONG
                   </h2>
                   <h2 className="font-['Cormorant_Garamond'] text-[50px] md:text-[80px] font-light italic -mt-1">
@@ -174,8 +173,7 @@ const HomePage = () => {
         <img
           src={isMobile ? BasedVanMob : BasedInVancouver}
           alt="Based in Vancouver"
-          className="w-full h-full object-cover object-top"
-          style={{ height: 'calc(100vh - 64px)' }}
+          className="w-full h-full object-cover object-top full-height"
         />
         <div className="flex flex-col md:grid md:grid-cols-12 pt-20 md:pt-28 pb-12 md:pb-28 bg-[#FDF7EC] px-10 md:-px-0">
           <div className="md:col-span-6 order-1 mb-8 md:mb-0">

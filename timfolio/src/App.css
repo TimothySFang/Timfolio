@@ -1,3 +1,12 @@
 body {
     -webkit-overflow-scrolling: touch;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
   }
+
+/* Use this for full-height elements instead of 100vh */
+.full-height {
+  height: 100vh; /* Fallback */
+  height: calc(var(--vh, 1vh) * 100);
+}

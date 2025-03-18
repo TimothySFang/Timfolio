@@ -7,7 +7,7 @@ const PhotographyPage = () => {
         <iframe
           src="https://timothyfang.myportfolio.com/"
           title="Photography Portfolio"
-          className="w-full h-[calc(100vh-64px)] border-none"
+          className="w-full full-height border-none"
           loading="lazy"
         />
       </div>
