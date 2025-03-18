@@ -16,3 +16,15 @@ body {
   height: 100vh; /* Fallback */
   height: calc(var(--vh, 1vh) * 100);
 }
+
+/* Add this to your existing CSS */
+@supports (-webkit-touch-callout: none) {
+  /* iOS-specific fix for bottom bar */
+  .ios-padding-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 20px);
+  }
+  
+  footer {
+    padding-bottom: calc(env(safe-area-inset-bottom, 20px) + 1rem);
+  }
+}
