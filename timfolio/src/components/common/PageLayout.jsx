@@ -7,22 +7,24 @@ const PageLayout = ({ children, isPhotographyPage = false }) => {
   // Fix for iOS Safari viewport height issues
   useEffect(() => {
     const setVh = () => {
-      // Set a CSS variable for viewport height that works consistently on iOS
       const vh = window.innerHeight * 0.01;
       document.documentElement.style.setProperty('--vh', `${vh}px`);
     };
 
-    // Set initially and on resize
     setVh();
     window.addEventListener('resize', setVh);
+    window.addEventListener('orientationchange', setVh);
     
-    return () => window.removeEventListener('resize', setVh);
+    return () => {
+      window.removeEventListener('resize', setVh);
+      window.removeEventListener('orientationchange', setVh);
+    };
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="relative">
       <Header isPhotographyPage={isPhotographyPage} />
-      <main className="flex-grow">
+      <main>
         {children}
       </main>
       {!isPhotographyPage && <Footer />}

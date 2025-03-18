@@ -187,7 +187,7 @@ const HomePage = () => {
             </div>
           </div>
           <div className="md:col-span-6 order-2 h-full flex items-start px-4 md:pl-20">
-            <div className="flex flex-col items-start">
+            <div className="flex flex-col justify-center items-center">
               <div className="relative">
                 <div className="relative">
                   <span className="absolute top-2 md:top-4 left-5 bg-[#FDB50B]/60 md:inset-y-10 inset-y-6">
@@ -195,7 +195,7 @@ const HomePage = () => {
                       ABOUT ME
                     </h2>
                   </span>
-                  <h2 className="font-['Cormorant_Garamond'] text-[40px] md:text-[80px] font-light italic relative -mt-4">
+                  <h2 className="font-['Cormorant_Garamond'] text-[50px] md:text-[80px] font-light italic relative -mt-4">
                     ABOUT ME
                   </h2>
                 </div>
