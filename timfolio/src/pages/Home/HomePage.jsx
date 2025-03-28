@@ -34,56 +34,6 @@ const HomePage = () => {
     return () => window.removeEventListener('resize', checkIfMobile);
   }, []);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const [entry] = entries;
-        if (entry.isIntersecting) {
-          setBalconyInView(true);
-          // Once we've seen it, no need to observe anymore
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.5 } // Trigger when 50% of the element is visible
-    );
-
-    if (balconyRef.current) {
-      observer.observe(balconyRef.current);
-    }
-
-    return () => {
-      if (balconyRef.current) {
-        observer.unobserve(balconyRef.current);
-      }
-    };
-  }, []);
-
-  // Start the loading animation sequence when balcony comes into view
-  useEffect(() => {
-    if (balconyInView) {
-      // Lock scrolling when the balcony image is in view
-      document.body.style.overflow = "hidden";
-
-      // After animation completes, allow scrolling again
-      const timer = setTimeout(() => {
-        setLoadingComplete(true);
-        document.body.style.overflow = "auto";
-
-        // Scroll to the content below after animation
-        if (contentRef.current) {
-          setTimeout(() => {
-            window.scrollTo({
-              top: window.innerHeight * 2,
-              behavior: "smooth"
-            });
-          }, 500);
-        }
-      }, 3000); // 3 seconds for the loading animation
-
-      return () => clearTimeout(timer);
-    }
-  }, [balconyInView]);
-
   return (
     <PageLayout>
       <div className="snap-y snap-mandatory">
