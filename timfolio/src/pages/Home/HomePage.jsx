@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import Marquee from "../../components/common/Marquee";
 import PageLayout from "@/components/common/PageLayout";
 import balcony from "../../assets/Home/balcony.jpg";
 import cartImage from "../../assets/Home/cart.jpg";
@@ -84,6 +85,9 @@ const HomePage = () => {
         </div>
 
         <div ref={contentRef} className="bg-[#FDF7EC] full-height">
+        <div className="pt-16">
+            <Marquee text={["SOFTWARE DEVELOPER", "CREATIVE", "ARTIST", "PHOTOGRAPHER", "CLIMBER"]} spacing={8} speed={150} />
+          </div>
           <div className="flex flex-col md:grid md:grid-cols-12 h-full pt-20 md:pt-28 pb-12 md:pb-28 px-4 md:px-0">
             <div className="md:col-span-6 order-2 md:order-1 h-full flex items-center justify-center">
               <div className="flex flex-col justify-center items-center">
@@ -119,6 +123,7 @@ const HomePage = () => {
             </div>
           </div>
         </div>
+
         {/* Conditionally render different images based on screen size */}
         <img
           src={isMobile ? BasedVanMob : BasedInVancouver}

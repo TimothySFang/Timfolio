@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import PageLayout from "../../components/common/PageLayout";
 import ExperienceSection from "../../components/Software/ExperienceSection";
+import ResumeModal from "../../components/Software/ResumeModal";
+import Marquee from "../../components/common/Marquee";
 import jobData from "../../assets/Software/JobExperience.json";
 
 const SoftwarePage = () => {
     const [isMobile, setIsMobile] = useState(false);
+    const [isResumeOpen, setIsResumeOpen] = useState(false);
 
     // Check if the device is mobile
     useEffect(() => {
@@ -45,9 +48,9 @@ const SoftwarePage = () => {
                                 <span className="absolute inset-0 bg-[#FDB50B]/60 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                             </p>
                         </div>
-                        <div className="relative group cursor-pointer">
+                        <div className="relative group cursor-pointer" onClick={() => setIsResumeOpen(true)}>
                             <p className="font-['Space_Grotesk'] text-xs tracking-widest text-[#4A4139] relative inline-block">
-                                <span className="opacity-0 group-hover:opacity-100 absolute -left-4">{'>'}</span>
+                                <span className="opacity-0 group-hover:opacity-100 absolute -left-4 transition-all duration-200 group-hover:-translate-x-1">{'>'}</span>
                                 <span className="relative z-10">RESUME</span>
                                 <span className="absolute inset-0 bg-[#FDB50B]/60 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                             </p>
@@ -59,6 +62,7 @@ const SoftwarePage = () => {
                 </div>
             </div>
             <div className="bg-[#FDF7EC] py-10 md:py-20">
+                <Marquee className="mb-10 md:mb-20" text="EXPERIENCE" speed={150} />
                 {jobData.map((job, index) => (
                     <ExperienceSection 
                         key={job.Title}
@@ -73,6 +77,10 @@ const SoftwarePage = () => {
                     />
                 ))}
             </div>
+            <ResumeModal 
+                isOpen={isResumeOpen}
+                onClose={() => setIsResumeOpen(false)}
+            />
         </PageLayout>
     )
 }
