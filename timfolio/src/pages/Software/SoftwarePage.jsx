@@ -102,7 +102,7 @@ const SoftwarePage = () => {
                         <div className="relative">
                             <div className="relative">
                                 <span className="absolute top-2 md:top-4 left-5 bg-[#FDB50B]/60 md:inset-y-10 inset-y-6">
-                                    <h2 className="font-['Cormorant_Garamond'] text-[50px] md:text-[80px] font-medium italic invisible ">
+                                    <h2 className="font-['Cormorant_Garamond'] text-[50px] md:text-[80px] font-medium italic invisible">
                                         PICTURESQUE
                                     </h2>
                                 </span>
@@ -114,18 +114,27 @@ const SoftwarePage = () => {
 
                         <div className="mt-5 max-w-xl">
                             <p className="font-['Roboto'] font-extralight text-[12px] md:text-[14px] lg:text-base leading-relaxed mb-6">
-                                Hi, I'm Timothy! I'm a software engineer passionate about building meaningful, user-focused solutions. My journey as a Chinese-Canadian immigrant has shaped my curiosity and resilience, which I bring into coding, exploring transformative ideas, and personal challenges. I thrive at the intersection of creativity and logic, with experience in full-stack development and a love for learning new technologies.
+                                Picturesque reimagines reading for people with ADHD and dyslexia by pairing every page of a book with
+                                an AI-generated, context-aware illustration. By reducing cognitive load and enhancing comprehension,
+                                it makes stories more engaging and accessible.
                             </p>
 
-                            <p className="font-['Roboto'] font-extralight text-[12px] md:text-[14px] lg:text-base  leading-relaxed">
-                                Beyond tech, I'm a triathlete-in-training, aiming to complete an Ironman. I enjoy experimenting with gaming setups, running marathons, and getting lost in Stardew Valley. I believe small steps create big change—whether it's shipping a feature, mastering a skill, or pushing through the last mile. Let's build something impactful together!
+                            <p className="font-['Roboto'] font-extralight text-[12px] md:text-[14px] lg:text-base leading-relaxed mb-6">
+                                Built as a full-stack ePub reader, Picturesque uses React, Vite, and Bootstrap on the frontend, with
+                                Python, Flask, DALL-E, and SambaNova powering the backend. Storage is handled with Pinata.
+                            </p>
+
+                            <p className="font-['Roboto'] font-extralight text-[12px] md:text-[14px] lg:text-base leading-relaxed mb-6">
+                                Im super proud to have created an end-to-end accessible tool, learning new APIs and overcoming challenges
+                                like Pinata’s lack of a Python SDK. Next, I plan to add a library for previously read books and
+                                improve text handling for chapters and sections.
                             </p>
                         </div>
-
                     </div>
+
                 </div>
             </div>
-            <div className="flex flex-col md:grid md:grid-cols-12 pt-20 md:pt-28 pb-12 md:pb-28 bg-[#FDF7EC] px-10 md:-px-0">
+            {/* <div className="flex flex-col md:grid md:grid-cols-12 pt-20 md:pt-28 pb-12 md:pb-28 bg-[#FDF7EC] px-10 md:-px-0">
             <div className="md:col-span-6 order-1 h-full flex items-start px-4 md:pl-20">
                     <div className="flex flex-col justify-center items-center">
                         <div className="relative">
@@ -163,7 +172,7 @@ const SoftwarePage = () => {
                         />
                     </div>
                 </div>
-            </div>
+            </div> */}
         </PageLayout>
     )
 }

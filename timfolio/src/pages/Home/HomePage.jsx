@@ -85,7 +85,7 @@ const HomePage = () => {
         </div>
 
         <div ref={contentRef} className="bg-[#FDF7EC] full-height">
-        <div className="pt-16">
+          <div className="pt-16">
             <Marquee text={["SOFTWARE DEVELOPER", "CREATIVE", "ARTIST", "PHOTOGRAPHER", "CLIMBER"]} spacing={8} speed={150} />
           </div>
           <div className="flex flex-col md:grid md:grid-cols-12 h-full pt-20 md:pt-28 pb-12 md:pb-28 px-4 md:px-0">
@@ -162,7 +162,7 @@ const HomePage = () => {
                 </p>
 
                 <p className="font-['Roboto'] font-extralight text-[12px] md:text-[14px] lg:text-base  leading-relaxed">
-                  Beyond tech, I'm a triathlete-in-training, aiming to complete an Ironman. I enjoy experimenting with gaming setups, running marathons, and getting lost in Stardew Valley. I believe small steps create big change—whether it's shipping a feature, mastering a skill, or pushing through the last mile. Let's build something impactful together!
+                  Beyond tech, I'm a triathlete-in-training aiming to complete an Ironman. I love rock climbing, running marathons, and getting lost in Stardew Valley. I believe small steps create big change, whether it's shipping a feature, mastering a skill, or pushing through the last mile. Let's build something impactful together!
                 </p>
               </div>
 
