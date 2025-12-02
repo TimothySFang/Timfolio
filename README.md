@@ -36,8 +36,6 @@ npm run preview
 npm run deploy
 
 ## 📝 TODO
-
-### High Priority
 - [ ] Implement bug report feature with email integration (EmailJS or similar)
 - [ ] Add more projects to the Software page
 - [ ] Optimize image loading and add lazy loading
