@@ -13,7 +13,7 @@ const Footer = () => {
           <div className="w-full md:w-1/6">
             <div className="flex justify-center md:justify-start gap-4 items-center">
               <a
-                href="https://github.com/Timothy-S-Fang"
+                href="https://github.com/TimothySFang"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:opacity-80 transition-opacity"
@@ -67,6 +67,9 @@ const Footer = () => {
           </div>
         </div>
 
+        <div className="font-['Space_Grotesk'] font-medium text-xs tracking-widest mt-8 md:mt-0">
+          REPORT A BUG!
+        </div>
         <div className="font-['Space_Grotesk'] font-medium text-xs tracking-widest mt-8 md:mt-0">
           PHOTOS TAKEN BY ME
         </div>

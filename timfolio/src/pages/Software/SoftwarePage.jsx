@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import PageLayout from "../../components/common/PageLayout";
 import ExperienceSection from "../../components/Software/ExperienceSection";
 import ResumeModal from "../../components/Software/ResumeModal";
@@ -9,6 +9,8 @@ import Picturesque from "../../assets/Software/picturesque.png"
 const SoftwarePage = () => {
     const [isMobile, setIsMobile] = useState(false);
     const [isResumeOpen, setIsResumeOpen] = useState(false);
+    const experienceSectionRef = useRef(null);
+    const projectSectionRef = useRef(null);
 
     // Check if the device is mobile
     useEffect(() => {
@@ -26,6 +28,19 @@ const SoftwarePage = () => {
         return () => window.removeEventListener('resize', checkIfMobile);
     }, []);
 
+    const handleCareerClick = () => {
+        if (experienceSectionRef.current) {
+            experienceSectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    };
+
+    const handleProjectClick = () => {
+        if (projectSectionRef.current) {
+            console.log('here!')
+            projectSectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+
     return (
         <PageLayout>
             <div className="h-screen bg-[#FDF7EC] flex flex-col justify-center items-center px-4">
@@ -36,14 +51,14 @@ const SoftwarePage = () => {
                 <div className="flex flex-col items-center gap-8">
                     <div className="text-center">
                         <div className="relative group cursor-pointer">
-                            <p className="font-['Space_Grotesk'] text-xs tracking-widest text-[#4A4139] relative inline-block">
+                            <p className="font-['Space_Grotesk'] text-xs tracking-widest text-[#4A4139] relative inline-block" onClick={handleCareerClick}>
                                 <span className="opacity-0 group-hover:opacity-100 absolute -left-4">{'>'}</span>
                                 <span className="relative z-10">CAREER</span>
                                 <span className="absolute inset-0 bg-[#FDB50B]/60 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                             </p>
                         </div>
                         <div className="relative group cursor-pointer">
-                            <p className="font-['Space_Grotesk'] text-xs tracking-widest text-[#4A4139] relative inline-block">
+                            <p className="font-['Space_Grotesk'] text-xs tracking-widest text-[#4A4139] relative inline-block" onClick={handleProjectClick}>
                                 <span className="opacity-0 group-hover:opacity-100 absolute -left-4">{'>'}</span>
                                 <span className="relative z-10">PROJECTS</span>
                                 <span className="absolute inset-0 bg-[#FDB50B]/60 opacity-0 group-hover:opacity-100 transition-opacity"></span>
@@ -62,7 +77,7 @@ const SoftwarePage = () => {
                     </p>
                 </div>
             </div>
-            <div className="bg-[#FDF7EC] py-10 md:py-20">
+            <div ref={experienceSectionRef} className="bg-[#FDF7EC] py-10 md:py-20">
                 <Marquee className="mb-10 md:mb-20" text="EXPERIENCE" speed={150} />
                 {jobData.map((job, index) => (
                     <ExperienceSection
@@ -83,55 +98,55 @@ const SoftwarePage = () => {
                 onClose={() => setIsResumeOpen(false)}
             />
 
-            <div className="bg-[#FDF7EC] py-10 md:py-20">
+            <div ref={projectSectionRef} className="bg-[#FDF7EC] py-10 md:py-20">
                 <Marquee className="mb-10 md:mb-20" text="PROJECTS" speed={150} />
-            </div>
-            <div className="flex flex-col md:grid md:grid-cols-12 pt-20 md:pt-28 pb-12 md:pb-28 bg-[#FDF7EC] px-10 md:-px-0">
-                <div className="md:col-span-6 order-1 mb-8 md:mb-0">
-                    <div className="relative flex justify-center">
-                        <div className="absolute top-[-30px] left-4 md:top-[-50px] md:right-[50px] bg-[#4A4139] aspect-[4/3] w-[85%]" />
-                        <img
-                            src={Picturesque}
-                            alt="About me visual"
-                            className="aspect-[4/3] w-[85%] object-cover mx-auto md:ml-auto relative"
-                        />
+                <div className="flex flex-col md:grid md:grid-cols-12 pt-20 md:pt-28 pb-12 md:pb-28 bg-[#FDF7EC] px-10 md:-px-0">
+                    <div className="md:col-span-6 order-1 mb-8 md:mb-0">
+                        <div className="relative flex justify-center">
+                            <div className="absolute top-[-30px] left-4 md:top-[-50px] md:right-[50px] bg-[#4A4139] aspect-[4/3] w-[85%]" />
+                            <img
+                                src={Picturesque}
+                                alt="About me visual"
+                                className="aspect-[4/3] w-[85%] object-cover mx-auto md:ml-auto relative"
+                            />
+                        </div>
                     </div>
-                </div>
-                <div className="md:col-span-6 order-2 h-full flex items-start px-4 md:pl-20">
-                    <div className="flex flex-col justify-center items-center">
-                        <div className="relative">
+                    <div className="md:col-span-6 order-2 h-full flex items-start px-4 md:pl-20">
+                        <div className="flex flex-col justify-center items-center">
                             <div className="relative">
-                                <span className="absolute top-2 md:top-4 left-5 bg-[#FDB50B]/60 md:inset-y-10 inset-y-6">
-                                    <h2 className="font-['Cormorant_Garamond'] text-[50px] md:text-[80px] font-medium italic invisible">
+                                <div className="relative">
+                                    <span className="absolute top-2 md:top-4 left-5 bg-[#FDB50B]/60 md:inset-y-10 inset-y-6">
+                                        <h2 className="font-['Cormorant_Garamond'] text-[50px] md:text-[80px] font-medium italic invisible">
+                                            PICTURESQUE
+                                        </h2>
+                                    </span>
+                                    <h2 className="font-['Cormorant_Garamond'] text-[50px] md:text-[80px] font-light italic relative -mt-4">
                                         PICTURESQUE
                                     </h2>
-                                </span>
-                                <h2 className="font-['Cormorant_Garamond'] text-[50px] md:text-[80px] font-light italic relative -mt-4">
-                                    PICTURESQUE
-                                </h2>
+                                </div>
+                            </div>
+
+                            <div className="mt-5 max-w-xl">
+                                <p className="font-['Roboto'] font-extralight text-[12px] md:text-[14px] lg:text-base leading-relaxed mb-6">
+                                    Picturesque reimagines reading for people with ADHD and dyslexia by pairing every page of a book with
+                                    an AI-generated, context-aware illustration. By reducing cognitive load and enhancing comprehension,
+                                    it makes stories more engaging and accessible.
+                                </p>
+
+                                <p className="font-['Roboto'] font-extralight text-[12px] md:text-[14px] lg:text-base leading-relaxed mb-6">
+                                    Built as a full-stack ePub reader, Picturesque uses React, Vite, and Bootstrap on the frontend, with
+                                    Python, Flask, DALL-E, and SambaNova powering the backend. Storage is handled with Pinata.
+                                </p>
+
+                                <p className="font-['Roboto'] font-extralight text-[12px] md:text-[14px] lg:text-base leading-relaxed mb-6">
+                                    Im super proud to have created an end-to-end accessible tool, learning new APIs and overcoming challenges
+                                    like Pinata’s lack of a Python SDK. Next, I plan to add a library for previously read books and
+                                    improve text handling for chapters and sections.
+                                </p>
                             </div>
                         </div>
 
-                        <div className="mt-5 max-w-xl">
-                            <p className="font-['Roboto'] font-extralight text-[12px] md:text-[14px] lg:text-base leading-relaxed mb-6">
-                                Picturesque reimagines reading for people with ADHD and dyslexia by pairing every page of a book with
-                                an AI-generated, context-aware illustration. By reducing cognitive load and enhancing comprehension,
-                                it makes stories more engaging and accessible.
-                            </p>
-
-                            <p className="font-['Roboto'] font-extralight text-[12px] md:text-[14px] lg:text-base leading-relaxed mb-6">
-                                Built as a full-stack ePub reader, Picturesque uses React, Vite, and Bootstrap on the frontend, with
-                                Python, Flask, DALL-E, and SambaNova powering the backend. Storage is handled with Pinata.
-                            </p>
-
-                            <p className="font-['Roboto'] font-extralight text-[12px] md:text-[14px] lg:text-base leading-relaxed mb-6">
-                                Im super proud to have created an end-to-end accessible tool, learning new APIs and overcoming challenges
-                                like Pinata’s lack of a Python SDK. Next, I plan to add a library for previously read books and
-                                improve text handling for chapters and sections.
-                            </p>
-                        </div>
                     </div>
-
                 </div>
             </div>
             {/* <div className="flex flex-col md:grid md:grid-cols-12 pt-20 md:pt-28 pb-12 md:pb-28 bg-[#FDF7EC] px-10 md:-px-0">
