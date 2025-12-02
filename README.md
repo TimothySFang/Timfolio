@@ -20,19 +20,19 @@ A personal portfolio website showcasing photography and software development wor
 
 ## Installation
 
-# Install dependencies
+### Install dependencies
 npm install
 
-# Run development server
+### Run development server
 npm run dev
 
-# Build for production
+### Build for production
 npm run build
 
-# Preview production build
+### Preview production build
 npm run preview
 
-# Deploy to GitHub Pages
+### Deploy to GitHub Pages
 npm run deploy
 
 ## 📝 TODO
