@@ -4,7 +4,9 @@ import ExperienceSection from "../../components/Software/ExperienceSection";
 import ResumeModal from "../../components/Software/ResumeModal";
 import Marquee from "../../components/common/Marquee";
 import jobData from "../../assets/Software/JobExperience.json";
-import Picturesque from "../../assets/Software/picturesque.png"
+import Picturesque from "../../assets/Software/picturesque.png";
+import FollowCare from "../../assets/Software/followCare.png";
+import StepnOut from "../../assets/Software/stepnout.png";
 
 const SoftwarePage = () => {
     const [isMobile, setIsMobile] = useState(false);
@@ -100,7 +102,118 @@ const SoftwarePage = () => {
 
             <div ref={projectSectionRef} className="bg-[#FDF7EC] py-10 md:py-20">
                 <Marquee className="mb-10 md:mb-20" text="PROJECTS" speed={150} />
-                <div className="flex flex-col md:grid md:grid-cols-12 pt-20 md:pt-28 pb-12 md:pb-28 bg-[#FDF7EC] px-10 md:-px-0">
+                
+                <div className="flex flex-col md:grid md:grid-cols-12 md:gap-8 pt-20 md:pt-28 pb-12 md:pb-28 bg-[#FDF7EC] px-10 md:px-16">
+                    <div className="md:col-span-6 order-1 mb-8 md:mb-0">
+                        <div className="relative flex justify-center">
+                            <div className="absolute top-[-30px] left-4 md:top-[-50px] md:right-[50px] bg-[#4A4139] aspect-[4/3] w-[85%]" />
+                            <img
+                                src={StepnOut}
+                                alt="About me visual"
+                                className="aspect-[4/3] w-[85%] object-cover mx-auto md:ml-auto relative"
+                            />
+                        </div>
+                    </div>
+                    <div className="md:col-span-6 order-2 h-full flex items-center justify-center px-4 md:px-8">
+                        <div className="flex flex-col justify-center items-center">
+                            <div className="relative">
+                                <div className="relative">
+                                    <span className="absolute top-2 md:top-4 left-5 bg-[#FDB50B]/60 md:inset-y-10 inset-y-6">
+                                        <h2 className="font-['Cormorant_Garamond'] text-[50px] md:text-[80px] font-medium italic invisible">
+                                            STEPN OUT
+                                        </h2>
+                                    </span>
+                                    <h2 className="font-['Cormorant_Garamond'] text-[50px] md:text-[80px] font-light italic relative -mt-4">
+                                        STEPN OUT
+                                    </h2>
+                                </div>
+                            </div>
+
+                            <div className="mt-5 max-w-xl">
+                                <p className="font-['Roboto'] font-extralight text-[12px] md:text-[14px] lg:text-base leading-relaxed mb-6">
+                                    StepnOut is a community-driven wellness app that encourages people to get outside and stay active through simple weekly challenges and social accountability. Instead of competition or streak pressure, the app focuses on consistency, encouragement, and real-world movement.
+                                </p>
+
+                                <p className="font-['Roboto'] font-extralight text-[12px] md:text-[14px] lg:text-base leading-relaxed mb-6">
+                                    Users complete approachable challenges, share quick check-ins or photos, and see friends and community members doing the same—making movement feel shared and sustainable.
+                                </p>
+
+                                <p className="font-['Roboto'] font-extralight text-[12px] md:text-[14px] lg:text-base leading-relaxed mb-6">
+                                    On the tech side, StepnOut is a mobile-first app built with a modern React-based frontend and a lightweight backend that supports user authentication, weekly challenges, social posts, and media uploads. The system is designed to be simple, scalable, and easy to iterate on.
+                                </p>
+
+                                <p className="font-['Roboto'] font-extralight text-[12px] md:text-[14px] lg:text-base leading-relaxed mb-6">
+                                    StepnOut is live on the{' '}
+                                    <a
+                                        href="https://apps.apple.com/ca/app/stepn-out/id6739888631"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="underline hover:text-[#FDB50B] transition-colors"
+                                        aria-label="Download StepnOut on the App Store"
+                                    >
+                                        App Store
+                                    </a>
+                                    {' '}and{' '}
+                                    <a
+                                        href="https://play.google.com/store/apps/details?id=com.patrickgousseau.stepnout&hl=en_CA"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="underline hover:text-[#FDB50B] transition-colors"
+                                        aria-label="Download StepnOut on Google Play"
+                                    >
+                                        Google Play
+                                    </a>
+                                    , and currently has 50+ users.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div className="flex flex-col md:grid md:grid-cols-12 md:gap-8 pt-20 md:pt-28 pb-12 md:pb-28 bg-[#FDF7EC] px-10 md:px-16">
+                    <div className="md:col-span-6 order-2 mb-8 md:mb-0">
+                        <div className="relative flex justify-center">
+                            <div className="absolute top-[-30px] left-4 md:top-[-50px] md:right-[50px] bg-[#4A4139] aspect-[4/3] w-[85%]" />
+                            <img
+                                src={FollowCare}
+                                alt="About me visual"
+                                className="aspect-[4/3] w-[85%] object-cover mx-auto md:ml-auto relative"
+                            />
+                        </div>
+                    </div>
+                    <div className="md:col-span-6 order-1 h-full flex items-center justify-center px-4 md:px-8">
+                        <div className="flex flex-col justify-center items-center">
+                            <div className="relative">
+                                <div className="relative">
+                                    <span className="absolute top-2 md:top-4 left-5 bg-[#FDB50B]/60 md:inset-y-10 inset-y-6">
+                                        <h2 className="font-['Cormorant_Garamond'] text-[50px] md:text-[80px] font-medium italic invisible">
+                                            FOLLOWCARE
+                                        </h2>
+                                    </span>
+                                    <h2 className="font-['Cormorant_Garamond'] text-[50px] md:text-[80px] font-light italic relative -mt-4">
+                                        FOLLOWCARE
+                                    </h2>
+                                </div>
+                            </div>
+
+                            <div className="mt-5 max-w-xl">
+                                <p className="font-['Roboto'] font-extralight text-[12px] md:text-[14px] lg:text-base leading-relaxed mb-6">
+                                    FollowCare is a proof-of-concept automated post-appointment follow-up system for dental clinics, built to demonstrate how multi-agent AI pipelines can automate patient care workflows using real clinic data. The system is designed to run on an existing dental clinic database and trigger follow-ups automatically after procedures.
+                                </p>
+
+                                <p className="font-['Roboto'] font-extralight text-[12px] md:text-[14px] lg:text-base leading-relaxed mb-6">
+                                    Using a multi-agent architecture, FollowCare performs patient check-ins, conducts basic risk assessments based on reported symptoms, and determines appropriate next steps including reassurance, care instructions, and automatic escalation to clinic staff. The goal is to reduce manual follow-up work while improving early detection of post-procedure issues.
+                                </p>
+
+                                <p className="font-['Roboto'] font-extralight text-[12px] md:text-[14px] lg:text-base leading-relaxed mb-6">
+                                    On the technical side, FollowCare is a backend-driven, agentic pipeline built to showcase real-world automation. Multiple agents handle data ingestion, follow-up generation, patient response interpretation, and risk evaluation. The system integrates with clinic databases, uses structured logic alongside LLM reasoning, and is designed with healthcare data sensitivity and extensibility in mind.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div className="flex flex-col md:grid md:grid-cols-12 md:gap-8 pt-20 md:pt-28 pb-12 md:pb-28 bg-[#FDF7EC] px-10 md:px-16">
                     <div className="md:col-span-6 order-1 mb-8 md:mb-0">
                         <div className="relative flex justify-center">
                             <div className="absolute top-[-30px] left-4 md:top-[-50px] md:right-[50px] bg-[#4A4139] aspect-[4/3] w-[85%]" />
@@ -111,7 +224,7 @@ const SoftwarePage = () => {
                             />
                         </div>
                     </div>
-                    <div className="md:col-span-6 order-2 h-full flex items-start px-4 md:pl-20">
+                    <div className="md:col-span-6 order-2 h-full flex items-center justify-center px-4 md:px-8">
                         <div className="flex flex-col justify-center items-center">
                             <div className="relative">
                                 <div className="relative">
@@ -148,46 +261,8 @@ const SoftwarePage = () => {
 
                     </div>
                 </div>
+                
             </div>
-            {/* <div className="flex flex-col md:grid md:grid-cols-12 pt-20 md:pt-28 pb-12 md:pb-28 bg-[#FDF7EC] px-10 md:-px-0">
-            <div className="md:col-span-6 order-1 h-full flex items-start px-4 md:pl-20">
-                    <div className="flex flex-col justify-center items-center">
-                        <div className="relative">
-                            <div className="relative">
-                                <span className="absolute top-2 md:top-4 left-5 bg-[#FDB50B]/60 md:inset-y-10 inset-y-6">
-                                    <h2 className="font-['Cormorant_Garamond'] text-[50px] md:text-[80px] font-medium italic invisible ">
-                                        PICTURESQUE
-                                    </h2>
-                                </span>
-                                <h2 className="font-['Cormorant_Garamond'] text-[50px] md:text-[80px] font-light italic relative -mt-4">
-                                    PICTURESQUE
-                                </h2>
-                            </div>
-                        </div>
-
-                        <div className="mt-5 max-w-xl">
-                            <p className="font-['Roboto'] font-extralight text-[12px] md:text-[14px] lg:text-base leading-relaxed mb-6">
-                                Hi, I'm Timothy! I'm a software engineer passionate about building meaningful, user-focused solutions. My journey as a Chinese-Canadian immigrant has shaped my curiosity and resilience, which I bring into coding, exploring transformative ideas, and personal challenges. I thrive at the intersection of creativity and logic, with experience in full-stack development and a love for learning new technologies.
-                            </p>
-
-                            <p className="font-['Roboto'] font-extralight text-[12px] md:text-[14px] lg:text-base  leading-relaxed">
-                                Beyond tech, I'm a triathlete-in-training, aiming to complete an Ironman. I enjoy experimenting with gaming setups, running marathons, and getting lost in Stardew Valley. I believe small steps create big change—whether it's shipping a feature, mastering a skill, or pushing through the last mile. Let's build something impactful together!
-                            </p>
-                        </div>
-
-                    </div>
-                </div>
-                <div className="md:col-span-6 order-2 mb-8 md:mb-0">
-                    <div className="relative flex justify-center">
-                        <div className="absolute top-[-30px] left-4 md:top-[-50px] md:right-[50px] bg-[#4A4139] aspect-[4/3] w-[70%]" />
-                        <img
-                            src={Picturesque}
-                            alt="About me visual"
-                            className="aspect-[4/3] w-[70%] object-cover mx-auto md:ml-auto relative"
-                        />
-                    </div>
-                </div>
-            </div> */}
         </PageLayout>
     )
 }

@@ -1,6 +1,10 @@
 # Timfolio
 
+![Timfolio Preview](timfolio/public/Timfolio.png)
+
 A personal portfolio website showcasing photography and software development work. All photos assets and code created by me.
+
+🔗 **[View Live Site](https://timothysfang.github.io/Timfolio/)**
 
 ## Features
 
@@ -37,7 +41,7 @@ npm run deploy
 
 ## 📝 TODO
 - [ ] Implement bug report feature with email integration (EmailJS or similar)
-- [ ] Add more projects to the Software page
+- [x] Add more projects to the Software page
 - [ ] Optimize image loading and add lazy loading
 - [ ] Implement contact form
 - [ ] Add a guestbook or comments section

@@ -52,8 +52,8 @@ const ExperienceSection = ({ title, image, skills, location, company, descriptio
     };
 
     return (
-        <div className={`${isMobile ? 'flex flex-col px-4' : 'grid grid-cols-12 gap-8 px-20'} py-6`}>
-            <div className={`${isMobile ? 'w-full mb-6' : `col-span-5 ${isReversed ? 'order-last' : ''}`} flex items-center`}>
+        <div className={`${isMobile ? 'flex flex-col px-4' : 'grid grid-cols-12 gap-12 px-16 lg:px-32 xl:px-40'} py-6`}>
+            <div className={`${isMobile ? 'w-full mb-6' : `col-span-5 ${isReversed ? 'order-last' : ''}`} flex items-center justify-center`}>
                 <div className="w-full flex items-center justify-center">
                     <div className={`${isMobile ? 'w-[200px] h-[200px]' : 'w-[350px] h-[400px]'} flex items-center justify-center`}>
                         {Logo && logoMap[Logo] && (
@@ -71,7 +71,7 @@ const ExperienceSection = ({ title, image, skills, location, company, descriptio
                 </div>
             </div>
 
-            <div className={isMobile ? 'w-full' : 'col-span-7'}>
+            <div className={isMobile ? 'w-full' : 'col-span-7 flex items-center'}>
                 <div className="flex flex-col gap-2">
                     <h2 className="font-['Space_Grotesk'] text-xl md:text-2xl font-bold tracking-widest text-[#4A4139]">
                         {title}
