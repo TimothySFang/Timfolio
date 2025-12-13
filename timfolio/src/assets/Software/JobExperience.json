@@ -1,68 +1,51 @@
 [
     {
         "Company": "Ensemble Systems Inc",
-        "Start": "Sep. 2024 - Present",
-        "Technology": "React, Next.js, TanStack React-Query",
+        "Start": "Sep. 2024 - May 2025",
+        "Technology": ["React", "Next.js", "Docker/Kubernetes", "LightningJS"],
         "Location": "Vancouver, BC",
         "Title": "Software Developer",
         "Logo": "Ensemble",
         "Description": {
             "summary": "Built user-focused solutions leveraging modern frontend technologies.",
             "bulletPoints": [
-                "Built test account authentication website using React and TanStack React-Query for TV streaming software.",
-                "Handled refresh and account JWT tokens alongside localStorage for data storing and retrieval."
+                "Built a secure test account authentication system using React-Query to improve authentication speed by 20%.",
+                "Engineered a robust token management system with JWT refresh and localStorage support, enhancing authentication reliability and session persistence.",
+                "Migrated client streaming platform to LightningJS 3, increasing performance by 25%.",
+                "Led sprint planning for a 4-person dev team, triaged 50+ tickets and reviewed 100+ PRs for smooth feature delivery."
             ]
         }
     },
     {
         "Company": "Selkirk Innovates",
         "Start": "May 2024 - Aug. 2024",
-        "Technology": "Neo4j, Python",
+        "Technology": ["OpenAI API", "Prompt-engineering", "Neo4j", "Python"],
         "Location": "Vancouver, BC",
         "Title": "Advanced Computing Research Intern",
         "Logo": "Selkirk",
         "Description": {
             "summary": "Developed innovative solutions to process and visualize structured data.",
             "bulletPoints": [
-                "Built Python data pipeline that converts 2000-page PDF data into graphical form using Neo4j.",
-                "Utilized prompt engineering to transform BC Building Code manual into structured JSON data.",
-                "Designed and implemented schema to represent building codes' hierarchical and logical relationships.",
-                "Work secured $500,000 in NSERC funding."
+                "Spearheaded development of a Python-based LLM pipeline to extract data from a 2,000+ page PDF using the GPT-4 API, automating unstructured-to-structured conversion and accelerating a previously manual process by 10x.",
+                "Leveraged prompt engineering and data chunking to transform over 10,000 unstructured building code provisions into a structured JSON format.",
+                "Modeled regulatory relationships in a Neo4j graph feature store, improving downstream RAG retrieval accuracy by 40%.",
+                "Contributed to $500K NSERC grant success by demonstrating how LLMs can modernize legacy regulation systems."
             ]
         }
     },
     {
         "Company": "Royal Bank of Canada",
-        "Start": "May 2023 - Aug. 2023",
-        "Technology": "React, Django, Elasticsearch",
+        "Start": "Sep. 2022 - Aug. 2023",
+        "Technology": ["React", "Django", "Elasticsearch"],
         "Location": "Toronto, ON",
         "Title": "Amplify Full-Stack Developer Intern",
         "Logo": "RBC",
         "Description": {
             "summary": "Created a full-stack application to drive sustainability efforts.",
             "bulletPoints": [
-                "Ideated, designed, and implemented full-stack application to aggregate real-time carbon emissions data.",
-                "Projected a savings of $4 million annually for RBC.",
-                "Designed user flow based on research from 25+ SME interviews and created multiple Figma UI/UX prototypes.",
-                "Developed React frontend with ChartJS for data visualization and custom React hooks using Axios.",
-                "Deployed through Helios in OCP4 with SSO via Azure AD OAuth 2.0 flow."
-            ]
-        }
-    },
-    {
-        "Company": "Royal Bank of Canada",
-        "Start": "Sep. 2022 - May 2023",
-        "Technology": "TypeScript, React, Node.js",
-        "Location": "Toronto, ON",
-        "Logo": "RBC",
-        "Title": "Full-Stack Developer Intern",
-        "Description": {
-            "summary": "Improved internal applications for RBC to enhance user experience.",
-            "bulletPoints": [
-                "Consolidated and displayed all RBC apps into a React component for easy access using data from Node API.",
-                "Added search and favorite functionality with localStorage for user convenience.",
-                "Shipped a new navigation bar to internal RBC domains, increasing website traffic by 40%.",
-                "Contributed backend function to return HTML files given a URL for frontend iframe display."
+                "Architected and delivered a full-stack solution (React, ChartJS, Django, Elasticsearch) for real-time carbon emissions tracking, automating manual reporting by 95% and unlocking $4M in projected annual savings.",
+                "Automated flat file data ingestion feature with modifiable data contract to streamline data calculation process.",
+                "Implemented Node.js backend function to fetch HTML from URLs, bypassing CORS and enabling iframe display of previously blocked content, improving content accessibility across 100% of targeted use cases."
             ]
         }
     }

@@ -52,7 +52,7 @@ const ExperienceSection = ({ title, image, skills, location, company, descriptio
     };
 
     return (
-        <div className={`${isMobile ? 'flex flex-col px-4' : 'grid grid-cols-12 gap-12 px-16 lg:px-32 xl:px-40'} py-6`}>
+        <div className={`${isMobile ? 'flex flex-col px-4' : 'grid grid-cols-12 gap-8 px-16 lg:px-24 xl:px-32'} py-6`}>
             <div className={`${isMobile ? 'w-full mb-6' : `col-span-5 ${isReversed ? 'order-last' : ''}`} flex items-center justify-center`}>
                 <div className="w-full flex items-center justify-center">
                     <div className={`${isMobile ? 'w-[200px] h-[200px]' : 'w-[350px] h-[400px]'} flex items-center justify-center`}>
@@ -73,14 +73,14 @@ const ExperienceSection = ({ title, image, skills, location, company, descriptio
 
             <div className={isMobile ? 'w-full' : 'col-span-7 flex items-center'}>
                 <div className="flex flex-col gap-2">
-                    <h2 className="font-['Space_Grotesk'] text-xl md:text-2xl font-bold tracking-widest text-[#4A4139]">
+                    <h2 className="font-['Space_Grotesk'] text-2xl md:text-3xl font-bold tracking-widest text-[#4A4139]">
                         {title}
                     </h2>
                     <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-4">
-                        <p className="font-['Space_Grotesk'] text-sm md:text-base tracking-widest text-[#4A4139]">
+                        <p className="font-['Space_Grotesk'] text-base md:text-lg tracking-widest text-[#4A4139]">
                             {company}
                         </p>
-                        <p className="font-['Space_Grotesk'] text-xs tracking-widest text-[#4A4139] opacity-70">
+                        <p className="font-['Space_Grotesk'] text-sm tracking-widest text-[#4A4139] opacity-70">
                             {location}
                         </p>
                     </div>
@@ -91,7 +91,7 @@ const ExperienceSection = ({ title, image, skills, location, company, descriptio
                         {Array.isArray(skills) ? skills.map((skill) => (
                             <span
                                 key={skill}
-                                className="font-['Space_Grotesk'] text-xs tracking-widest text-[#4A4139] bg-[#FDB50B]/20 px-3 py-1 rounded-full"
+                                className="font-['Space_Grotesk'] text-sm tracking-widest text-[#4A4139] bg-[#FDB50B]/20 px-3 py-1 rounded-full"
                             >
                                 {skill}
                             </span>
